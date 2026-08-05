@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Heebo:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -41,20 +41,20 @@
 
       <ol class="timeline">
         <li class="timeline__item reveal">
-          <div class="timeline__marker" aria-hidden="true"></div>
+          <div class="timeline__marker" aria-hidden="true"><span class="timeline__marker-dot"></span></div>
           <div class="timeline__content">
             <h3 class="timeline__title">ההודעה הראשונה בוואטסאפ</h3>
             <p class="timeline__text">
               [כאן יבוא הטקסט האישי על ההודעה הראשונה — מה נכתב, ולמה זה נשאר איתי]
             </p>
-            <div class="timeline__image">
-              <img src="assets/milestone-first-message.jpg" alt="ההודעה הראשונה" loading="lazy">
-            </div>
+            <figure class="timeline__image">
+              <img src="assets/milestone-first-message.jpg" alt="ההודעה הראשונה" loading="lazy" style="aspect-ratio:945/2048">
+            </figure>
           </div>
         </li>
 
         <li class="timeline__item reveal">
-          <div class="timeline__marker" aria-hidden="true"></div>
+          <div class="timeline__marker" aria-hidden="true"><span class="timeline__marker-dot"></span></div>
           <div class="timeline__content">
             <h3 class="timeline__title">השיחה הראשונה</h3>
             <p class="timeline__text">
@@ -64,7 +64,7 @@
         </li>
 
         <li class="timeline__item reveal">
-          <div class="timeline__marker" aria-hidden="true"></div>
+          <div class="timeline__marker" aria-hidden="true"><span class="timeline__marker-dot"></span></div>
           <div class="timeline__content">
             <h3 class="timeline__title">הדייט הראשון בהמבורגר</h3>
             <p class="timeline__text">
@@ -77,7 +77,7 @@
   </section>
 
   <!-- ===== הרגעים והטיולים ===== -->
-  <section class="section section--carousel" id="moments">
+  <section class="section section--gallery" id="moments">
     <div class="section__inner">
       <p class="section__eyebrow reveal">הרגעים והטיולים</p>
       <h2 class="section__title reveal">לאן שהלכנו ביחד</h2>
@@ -86,160 +86,152 @@
       </p>
     </div>
 
-    <div class="carousel reveal" data-carousel aria-roledescription="קרוסלה">
-      <div class="carousel__track" data-track>
+    <div class="gallery-wrap">
+      <div class="gallery">
 
-        <figure class="carousel__slide">
-          <img src="assets/trip-south-00-picnic.jpg" alt="פיקניק בדרך לדרום" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/trip-south-00-picnic.jpg" alt="פיקניק בדרך לדרום" loading="lazy" style="aspect-ratio:2048/1536">
           <figcaption>
-            <span class="carousel__place">בדרך לדרום האדום</span>
-            <span class="carousel__caption">[טקסט קצר על הפיקניק בדרך]</span>
+            <span class="gallery__place">בדרך לדרום האדום</span>
+            <span class="gallery__caption">[טקסט קצר על הפיקניק בדרך]</span>
           </figcaption>
         </figure>
 
-        <figure class="carousel__slide">
-          <img src="assets/trip-south-01.jpg" alt="דרום אדום" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/trip-south-01.jpg" alt="דרום אדום" loading="lazy" style="aspect-ratio:1824/1368">
           <figcaption>
-            <span class="carousel__place">דרום אדום</span>
-            <span class="carousel__caption">[טקסט קצר על שדות הכלניות]</span>
+            <span class="gallery__place">דרום אדום</span>
+            <span class="gallery__caption">[טקסט קצר על שדות הכלניות]</span>
           </figcaption>
         </figure>
 
-        <figure class="carousel__slide">
-          <img src="assets/trip-south-02.jpg" alt="דרום אדום" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/trip-south-02.jpg" alt="דרום אדום" loading="lazy" style="aspect-ratio:1500/2000">
           <figcaption>
-            <span class="carousel__place">דרום אדום</span>
-            <span class="carousel__caption">[טקסט קצר נוסף על אותו טיול]</span>
+            <span class="gallery__place">דרום אדום</span>
+            <span class="gallery__caption">[טקסט קצר נוסף על אותו טיול]</span>
           </figcaption>
         </figure>
 
-        <figure class="carousel__slide">
-          <img src="assets/trip-south-03.jpg" alt="דרום אדום" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/trip-south-03.jpg" alt="דרום אדום" loading="lazy" style="aspect-ratio:1824/1368">
           <figcaption>
-            <span class="carousel__place">דרום אדום</span>
-            <span class="carousel__caption">[עוד רגע מהשדה האדום]</span>
+            <span class="gallery__place">דרום אדום</span>
+            <span class="gallery__caption">[עוד רגע מהשדה האדום]</span>
           </figcaption>
         </figure>
 
-        <figure class="carousel__slide">
-          <img src="assets/trip-forest-01.jpg" alt="יער ראש העין" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/trip-forest-01.jpg" alt="יער ראש העין" loading="lazy" style="aspect-ratio:1600/1200">
           <figcaption>
-            <span class="carousel__place">יער ראש העין</span>
-            <span class="carousel__caption">[טקסט קצר על הטיול ביער]</span>
+            <span class="gallery__place">יער ראש העין</span>
+            <span class="gallery__caption">[טקסט קצר על הטיול ביער]</span>
           </figcaption>
         </figure>
 
-        <figure class="carousel__slide">
-          <img src="assets/trip-caesarea-01.jpg" alt="קיסריה" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/trip-caesarea-01.jpg" alt="קיסריה" loading="lazy" style="aspect-ratio:2048/1536">
           <figcaption>
-            <span class="carousel__place">קיסריה</span>
-            <span class="carousel__caption">[טקסט קצר על היום בקיסריה]</span>
+            <span class="gallery__place">קיסריה</span>
+            <span class="gallery__caption">[טקסט קצר על היום בקיסריה]</span>
           </figcaption>
         </figure>
 
-        <figure class="carousel__slide">
-          <img src="assets/trip-caesarea-02.jpg" alt="קיסריה" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/trip-caesarea-02.jpg" alt="קיסריה" loading="lazy" style="aspect-ratio:2048/1536">
           <figcaption>
-            <span class="carousel__place">קיסריה</span>
-            <span class="carousel__caption">[עוד רגע מקיסריה]</span>
+            <span class="gallery__place">קיסריה</span>
+            <span class="gallery__caption">[עוד רגע מקיסריה]</span>
           </figcaption>
         </figure>
 
-        <figure class="carousel__slide">
-          <img src="assets/trip-caesarea-03.jpg" alt="קיסריה" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/trip-caesarea-03.jpg" alt="קיסריה" loading="lazy" style="aspect-ratio:2048/1536">
           <figcaption>
-            <span class="carousel__place">קיסריה</span>
-            <span class="carousel__caption">[ארוחת הצהריים על החוף]</span>
+            <span class="gallery__place">קיסריה</span>
+            <span class="gallery__caption">[ארוחת הצהריים על החוף]</span>
           </figcaption>
         </figure>
 
-        <figure class="carousel__slide">
-          <img src="assets/trip-caesarea-04.jpg" alt="קיסריה" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/trip-caesarea-04.jpg" alt="קיסריה" loading="lazy" style="aspect-ratio:2048/1536">
           <figcaption>
-            <span class="carousel__place">קיסריה</span>
-            <span class="carousel__caption">[עוד רגע מהארוחה בקיסריה]</span>
+            <span class="gallery__place">קיסריה</span>
+            <span class="gallery__caption">[עוד רגע מהארוחה בקיסריה]</span>
           </figcaption>
         </figure>
 
-        <figure class="carousel__slide">
-          <img src="assets/trip-coast-01-running.jpg" alt="הריצה הראשונה" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/trip-coast-01-running.jpg" alt="הריצה הראשונה" loading="lazy" style="aspect-ratio:1080/1920">
           <figcaption>
-            <span class="carousel__place">הריצה הראשונה (והאחרונה) ביחד</span>
-            <span class="carousel__caption">[טקסט קצר וחמוד על הריצה המשותפת]</span>
+            <span class="gallery__place">הריצה הראשונה (והאחרונה) ביחד</span>
+            <span class="gallery__caption">[טקסט קצר וחמוד על הריצה המשותפת]</span>
           </figcaption>
         </figure>
 
-        <figure class="carousel__slide">
-          <img src="assets/trip-coast-02.jpg" alt="מסלול בשפיים" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/trip-coast-02.jpg" alt="מסלול בשפיים" loading="lazy" style="aspect-ratio:1368/1824">
           <figcaption>
-            <span class="carousel__place">מסלול בשפיים</span>
-            <span class="carousel__caption">[טקסט קצר על הטיול בחוף]</span>
+            <span class="gallery__place">מסלול בשפיים</span>
+            <span class="gallery__caption">[טקסט קצר על הטיול בחוף]</span>
           </figcaption>
         </figure>
 
-        <figure class="carousel__slide">
-          <img src="assets/trip-north-01.jpg" alt="טיול לצפון עם חברותיה" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/trip-north-01.jpg" alt="טיול לצפון עם חברותיה" loading="lazy" style="aspect-ratio:1536/2048">
           <figcaption>
-            <span class="carousel__place">טיול לצפון עם החברות</span>
-            <span class="carousel__caption">[טקסט קצר על הטיול לצפון]</span>
+            <span class="gallery__place">טיול לצפון עם החברות</span>
+            <span class="gallery__caption">[טקסט קצר על הטיול לצפון]</span>
           </figcaption>
         </figure>
 
-        <figure class="carousel__slide">
-          <img src="assets/trip-north-02.jpg" alt="טיול לצפון" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/trip-north-02.jpg" alt="טיול לצפון" loading="lazy" style="aspect-ratio:1206/1585">
           <figcaption>
-            <span class="carousel__place">טיול לצפון</span>
-            <span class="carousel__caption">[עוד רגע מהטיול לצפון]</span>
+            <span class="gallery__place">טיול לצפון</span>
+            <span class="gallery__caption">[עוד רגע מהטיול לצפון]</span>
           </figcaption>
         </figure>
 
-        <figure class="carousel__slide">
-          <img src="assets/trip-north-03.jpg" alt="טיול לצפון" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/trip-north-03.jpg" alt="טיול לצפון" loading="lazy" style="aspect-ratio:1536/2048">
           <figcaption>
-            <span class="carousel__place">טיול לצפון</span>
-            <span class="carousel__caption">[עוד רגע מהטיול לצפון]</span>
+            <span class="gallery__place">טיול לצפון</span>
+            <span class="gallery__caption">[עוד רגע מהטיול לצפון]</span>
           </figcaption>
         </figure>
 
       </div>
-
-      <button class="carousel__arrow carousel__arrow--prev" data-prev aria-label="הקודם">‹</button>
-      <button class="carousel__arrow carousel__arrow--next" data-next aria-label="הבא">›</button>
-      <div class="carousel__dots" data-dots></div>
     </div>
   </section>
 
   <!-- ===== המקומות שלנו ===== -->
-  <section class="section section--carousel" id="places">
+  <section class="section section--gallery" id="places">
     <div class="section__inner">
       <p class="section__eyebrow reveal">המקומות שלנו</p>
       <h2 class="section__title reveal">הפינות הקטנות שלנו</h2>
     </div>
 
-    <div class="carousel carousel--places reveal" data-carousel aria-roledescription="קרוסלה">
-      <div class="carousel__track" data-track>
+    <div class="gallery-wrap">
+      <div class="gallery gallery--pair">
 
-        <figure class="carousel__slide">
-          <img src="assets/place-cafe-01.jpg" alt="עגלת קפה" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/place-cafe-01.jpg" alt="עגלת קפה" loading="lazy" style="aspect-ratio:1200/1600">
           <figcaption>
-            <span class="carousel__place">עגלת הקפה שלנו</span>
-            <span class="carousel__caption">[טקסט קצר על עגלת הקפה]</span>
+            <span class="gallery__place">עגלת הקפה שלנו</span>
+            <span class="gallery__caption">[טקסט קצר על עגלת הקפה]</span>
           </figcaption>
         </figure>
 
-        <figure class="carousel__slide">
-          <img src="assets/place-cafe-02.jpg" alt="קפה ג'ורנו" loading="lazy">
+        <figure class="gallery__item reveal">
+          <img src="assets/place-cafe-02.jpg" alt="קפה ג'ורנו" loading="lazy" style="aspect-ratio:1200/1600">
           <figcaption>
-            <span class="carousel__place">קפה ג'ורנו</span>
-            <span class="carousel__caption">[טקסט קצר על קפה ג'ורנו לפני הים]</span>
+            <span class="gallery__place">קפה ג'ורנו</span>
+            <span class="gallery__caption">[טקסט קצר על קפה ג'ורנו לפני הים]</span>
           </figcaption>
         </figure>
 
       </div>
-
-      <button class="carousel__arrow carousel__arrow--prev" data-prev aria-label="הקודם">‹</button>
-      <button class="carousel__arrow carousel__arrow--next" data-next aria-label="הבא">›</button>
-      <div class="carousel__dots" data-dots></div>
     </div>
 
     <p class="section__note reveal">
@@ -304,8 +296,8 @@
   <!-- ===== סיום ===== -->
   <section class="section section--closing" id="closing">
     <div class="closing__images">
-      <img class="closing__image closing__image--1 reveal" src="assets/closing-01.jpg" alt="רז ואריאל" loading="lazy">
-      <img class="closing__image closing__image--2 reveal" src="assets/closing-02.jpg" alt="רז" loading="lazy">
+      <img class="closing__image closing__image--1 reveal" src="assets/closing-01.jpg" alt="רז ואריאל" loading="lazy" style="aspect-ratio:2000/1500">
+      <img class="closing__image closing__image--2 reveal" src="assets/closing-02.jpg" alt="רז" loading="lazy" style="aspect-ratio:2048/1536">
     </div>
     <div class="section__inner section__inner--narrow">
       <p class="section__eyebrow reveal">לסיום</p>
