@@ -362,6 +362,20 @@ p { margin: 0; }
   color: var(--ink);
 }
 
+.section__image--center {
+  max-width: 420px;
+  margin: var(--space-4) auto 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-soft);
+  transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease);
+}
+.section__image--center:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+}
+.section__image--center img { width: 100%; display: block; }
+
 /* ===== Future grid ===== */
 .future-grid {
   display: grid;
