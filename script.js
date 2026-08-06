@@ -1,3 +1,44 @@
+// Marquee — random order each load, duplicated once for a seamless loop
+const marqueeImages = [
+  'trip-south-01.jpg', 'trip-south-02.jpg', 'trip-south-03.jpg',
+  'trip-forest-01.jpg', 'trip-caesarea-01.jpg', 'trip-caesarea-02.jpg',
+  'trip-caesarea-03.jpg', 'trip-caesarea-04.jpg', 'trip-coast-00-shfayim.jpg',
+  'trip-coast-01-running.jpg', 'trip-coast-02.jpg', 'trip-north-01.jpg',
+  'trip-north-02.jpg', 'trip-north-03.jpg', 'place-cafe-02.jpg',
+  'place-cafe-cart-01.jpg', 'place-asian-01.jpg',
+  // הוסיפי כאן קבצים נוספים מתוך assets/, באותו פורמט: 'שם-קובץ.jpg',
+];
+
+function shuffle(array) {
+  const result = array.slice();
+  for (let i = result.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [result[i], result[j]] = [result[j], result[i]];
+  }
+  return result;
+}
+
+const marqueeTrack = document.querySelector('[data-marquee-track]');
+if (marqueeTrack) {
+  const order = shuffle(marqueeImages);
+  const buildSet = (hidden) => order.map((file) => {
+    const figure = document.createElement('figure');
+    figure.className = 'marquee__item';
+    const img = document.createElement('img');
+    img.src = `assets/${file}`;
+    img.loading = 'lazy';
+    if (hidden) {
+      figure.setAttribute('aria-hidden', 'true');
+      img.alt = '';
+    } else {
+      img.alt = file.replace(/\.[a-z]+$/i, '').replace(/[-_]/g, ' ');
+    }
+    figure.appendChild(img);
+    return figure;
+  });
+  marqueeTrack.append(...buildSet(false), ...buildSet(true));
+}
+
 // Scroll reveal
 const revealEls = document.querySelectorAll('.reveal');
 

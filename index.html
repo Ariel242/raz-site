@@ -8,7 +8,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Assistant:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Frank+Ruhl+Libre:wght@400;500;600;700&family=Rubik:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -23,7 +23,7 @@
     <p class="hero__eyebrow">בשבילך</p>
     <h1 class="hero__title">רזוש</h1>
     <p class="hero__line">
-      [כאן ייכנס משפט פתיחה אישי וחם — כמה מילים שמתארות מה את בשבילי]
+      מזל טוב לגיל 27, רזוש — הכנתי לך פינה קטנה משלך
     </p>
     <div class="hero__scroll-hint" aria-hidden="true">
       <span></span>
@@ -37,25 +37,26 @@
   <section class="section section--timeline" id="what-was">
     <div class="section__inner">
       <p class="section__eyebrow reveal">מה שהיה</p>
-      <h2 class="section__title reveal">איך זה התחיל</h2>
+      <h2 class="section__title reveal">הדרך שהביאה אותנו לכאן</h2>
 
       <ol class="timeline">
         <li class="timeline__item reveal">
-          <div class="timeline__marker" aria-hidden="true"><span class="timeline__marker-dot"></span></div>
+          <div class="timeline__thumb">
+            <img src="assets/milestone-first-message.jpg" alt="ההודעה הראשונה" loading="lazy">
+          </div>
           <div class="timeline__content">
-            <h3 class="timeline__title">ההודעה הראשונה בוואטסאפ</h3>
+            <time class="timeline__date">[תאריך]</time>
+            <h3 class="timeline__title">הודעת הווטסאפ הראשונה</h3>
             <p class="timeline__text">
               [כאן יבוא הטקסט האישי על ההודעה הראשונה — מה נכתב, ולמה זה נשאר איתי]
             </p>
-            <figure class="timeline__image">
-              <img src="assets/milestone-first-message.jpg" alt="ההודעה הראשונה" loading="lazy" style="aspect-ratio:945/2048">
-            </figure>
           </div>
         </li>
 
         <li class="timeline__item reveal">
-          <div class="timeline__marker" aria-hidden="true"><span class="timeline__marker-dot"></span></div>
+          <div class="timeline__thumb timeline__thumb--dot" aria-hidden="true"></div>
           <div class="timeline__content">
+            <time class="timeline__date">[תאריך]</time>
             <h3 class="timeline__title">השיחה הראשונה</h3>
             <p class="timeline__text">
               [כאן יבוא הטקסט האישי על השיחה הראשונה בינינו]
@@ -64,11 +65,26 @@
         </li>
 
         <li class="timeline__item reveal">
-          <div class="timeline__marker" aria-hidden="true"><span class="timeline__marker-dot"></span></div>
+          <div class="timeline__thumb timeline__thumb--dot" aria-hidden="true"></div>
           <div class="timeline__content">
-            <h3 class="timeline__title">הדייט הראשון בהמבורגר</h3>
+            <time class="timeline__date">[תאריך]</time>
+            <h3 class="timeline__title">רובן - ההמבורגר שאף פעם לא אשכח</h3>
             <p class="timeline__text">
               [כאן יבוא הטקסט האישי על הדייט הראשון]
+            </p>
+          </div>
+        </li>
+
+        <li class="timeline__item reveal">
+          <div class="timeline__thumb">
+            <img src="assets/special-after-siren.jpg" alt="אחרי האזעקה בכפר סבא" loading="lazy">
+          </div>
+          <div class="timeline__content">
+            <time class="timeline__date">[תאריך]</time>
+            <h3 class="timeline__title">כפר סבא</h3>
+            <p class="timeline__text">
+              [כאן ייכנס הטקסט האישי והאינטימי על האזעקה בכפר סבא והירידה למקלט —
+              הרגע הזה שמזכיר שמעבר לכל הטיולים והתמונות, יש את זה]
             </p>
           </div>
         </li>
@@ -76,190 +92,20 @@
     </div>
   </section>
 
-  <!-- ===== הרגעים והטיולים ===== -->
-  <section class="section section--gallery" id="moments">
+  <!-- ===== הרגעים והמקומות שלנו ===== -->
+  <section class="section section--marquee" id="moments">
     <div class="section__inner">
-      <p class="section__eyebrow reveal">הרגעים והטיולים</p>
-      <h2 class="section__title reveal">לאן שהלכנו ביחד</h2>
-      <p class="section__intro reveal">
-        [כאן אפשר להוסיף משפט קצר שפותח את הפרק הזה]
-      </p>
+      <p class="section__eyebrow reveal">הרגעים והמקומות שלנו</p>
+      <h2 class="section__title reveal">הרגעים בדרך</h2>
     </div>
 
-    <div class="gallery-wrap">
-      <div class="gallery">
-
-        <figure class="gallery__item reveal">
-          <img src="assets/trip-south-01.jpg" alt="דרום אדום" loading="lazy" style="aspect-ratio:1824/1368">
-          <figcaption>
-            <span class="gallery__place">דרום אדום</span>
-            <span class="gallery__caption">[טקסט קצר על שדות הכלניות]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/trip-south-02.jpg" alt="דרום אדום" loading="lazy" style="aspect-ratio:1500/2000">
-          <figcaption>
-            <span class="gallery__place">דרום אדום</span>
-            <span class="gallery__caption">[טקסט קצר נוסף על אותו טיול]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/trip-south-03.jpg" alt="דרום אדום" loading="lazy" style="aspect-ratio:1824/1368">
-          <figcaption>
-            <span class="gallery__place">דרום אדום</span>
-            <span class="gallery__caption">[עוד רגע מהשדה האדום]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/trip-forest-01.jpg" alt="יער ראש העין" loading="lazy" style="aspect-ratio:1600/1200">
-          <figcaption>
-            <span class="gallery__place">יער ראש העין</span>
-            <span class="gallery__caption">[טקסט קצר על הטיול ביער]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/trip-caesarea-01.jpg" alt="קיסריה" loading="lazy" style="aspect-ratio:2048/1536">
-          <figcaption>
-            <span class="gallery__place">קיסריה</span>
-            <span class="gallery__caption">[טקסט קצר על היום בקיסריה]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/trip-caesarea-02.jpg" alt="קיסריה" loading="lazy" style="aspect-ratio:2048/1536">
-          <figcaption>
-            <span class="gallery__place">קיסריה</span>
-            <span class="gallery__caption">[עוד רגע מקיסריה]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/trip-caesarea-03.jpg" alt="קיסריה" loading="lazy" style="aspect-ratio:2048/1536">
-          <figcaption>
-            <span class="gallery__place">קיסריה</span>
-            <span class="gallery__caption">[ארוחת הצהריים על החוף]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/trip-caesarea-04.jpg" alt="קיסריה" loading="lazy" style="aspect-ratio:2048/1536">
-          <figcaption>
-            <span class="gallery__place">קיסריה</span>
-            <span class="gallery__caption">[עוד רגע מהארוחה בקיסריה]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/trip-coast-00-shfayim.jpg" alt="שפיים" loading="lazy" style="aspect-ratio:2048/1536">
-          <figcaption>
-            <span class="gallery__place">שפיים</span>
-            <span class="gallery__caption">[טקסט קצר על הפיקניק בשפיים]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/trip-coast-01-running.jpg" alt="הריצה הראשונה" loading="lazy" style="aspect-ratio:1080/1920">
-          <figcaption>
-            <span class="gallery__place">הריצה הראשונה (והאחרונה) ביחד</span>
-            <span class="gallery__caption">[טקסט קצר וחמוד על הריצה המשותפת]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/trip-coast-02.jpg" alt="מסלול בשפיים" loading="lazy" style="aspect-ratio:1368/1824">
-          <figcaption>
-            <span class="gallery__place">מסלול בשפיים</span>
-            <span class="gallery__caption">[טקסט קצר על הטיול בחוף]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/trip-north-01.jpg" alt="טיול לצפון עם חברותיה" loading="lazy" style="aspect-ratio:1536/2048">
-          <figcaption>
-            <span class="gallery__place">טיול לצפון עם החברות</span>
-            <span class="gallery__caption">[טקסט קצר על הטיול לצפון]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/trip-north-02.jpg" alt="טיול לצפון" loading="lazy" style="aspect-ratio:1206/1585">
-          <figcaption>
-            <span class="gallery__place">טיול לצפון</span>
-            <span class="gallery__caption">[עוד רגע מהטיול לצפון]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/trip-north-03.jpg" alt="טיול לצפון" loading="lazy" style="aspect-ratio:1536/2048">
-          <figcaption>
-            <span class="gallery__place">טיול לצפון</span>
-            <span class="gallery__caption">[עוד רגע מהטיול לצפון]</span>
-          </figcaption>
-        </figure>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== המקומות שלנו ===== -->
-  <section class="section section--gallery" id="places">
-    <div class="section__inner">
-      <p class="section__eyebrow reveal">המקומות שלנו</p>
-      <h2 class="section__title reveal">הפינות הקטנות שלנו</h2>
-    </div>
-
-    <div class="gallery-wrap">
-      <div class="gallery">
-
-        <figure class="gallery__item reveal">
-          <img src="assets/place-cafe-02.jpg" alt="קפה ג'ורנו" loading="lazy" style="aspect-ratio:1200/1600">
-          <figcaption>
-            <span class="gallery__place">קפה ג'ורנו</span>
-            <span class="gallery__caption">[טקסט קצר על קפה ג'ורנו לפני הים]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/place-cafe-cart-01.jpg" alt="עגלת קפה בביתן אהרון" loading="lazy" style="aspect-ratio:1600/1200">
-          <figcaption>
-            <span class="gallery__place">ביתן אהרון</span>
-            <span class="gallery__caption">[טקסט קצר על עגלת הקפה בביתן אהרון]</span>
-          </figcaption>
-        </figure>
-
-        <figure class="gallery__item reveal">
-          <img src="assets/place-asian-01.jpg" alt="ארוחה אסייתית" loading="lazy" style="aspect-ratio:1500/2000">
-          <figcaption>
-            <span class="gallery__place">הסושי שלנו</span>
-            <span class="gallery__caption">[טקסט קצר על המסעדה האסייתית]</span>
-          </figcaption>
-        </figure>
-
-      </div>
+    <div class="marquee">
+      <div class="marquee__track" data-marquee-track></div>
     </div>
 
     <p class="section__note reveal">
       [עוד המון מקומות אהובים שעוד נצלם]
     </p>
-  </section>
-
-  <!-- ===== רגע מיוחד ===== -->
-  <section class="section section--intimate" id="special-moment">
-    <div class="section__inner section__inner--narrow">
-      <p class="section__eyebrow reveal">רגע מיוחד</p>
-      <h2 class="section__title reveal">כפר סבא</h2>
-      <p class="section__text reveal">
-        [כאן ייכנס הטקסט האישי והאינטימי על האזעקה בכפר סבא והירידה למקלט —
-        הרגע הזה שמזכיר שמעבר לכל הטיולים והתמונות, יש את זה]
-      </p>
-      <figure class="section__image section__image--center reveal">
-        <img src="assets/special-after-siren.jpg" alt="אחרי האזעקה בכפר סבא" loading="lazy" style="aspect-ratio:2048/1536">
-      </figure>
-    </div>
   </section>
 
   <!-- ===== מה שיהיה ===== -->
