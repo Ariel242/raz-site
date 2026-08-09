@@ -336,6 +336,8 @@ p {
 }
 
 .timeline__text {
+  font-family: var(--font-serif);
+  font-style: italic;
   color: var(--ink-soft);
   line-height: 1.8;
 }
