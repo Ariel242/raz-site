@@ -9,8 +9,10 @@
   --ink: #241f19;
   --ink-body: #46392c;
   --ink-soft: #7a6c58;
-  --ink-faint: #a89a83;
+  --ink-faint: #8f8068;
   --white: #fffdf9;
+  --accent: #8a5145;
+  --accent-soft: #a8695c;
 
   --font-serif: 'Frank Ruhl Libre', 'David Libre', serif;
   --font-sans: 'Rubik', sans-serif;
@@ -31,6 +33,13 @@
 
 * { box-sizing: border-box; }
 
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 3px;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -46,12 +55,16 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-img { max-width: 100%; display: block; }
+img {
+  max-width: 100%;
+  display: block;
+  filter: sepia(8%) saturate(1.08) contrast(1.03) brightness(1.01);
+}
 figure { margin: 0; }
 
 h1, h2, h3 {
   font-family: var(--font-serif);
-  font-weight: 500;
+  font-weight: 400;
   margin: 0;
   color: var(--ink);
 }
@@ -70,6 +83,10 @@ p {
 
 .section__inner--narrow {
   max-width: 680px;
+}
+
+#what-was .section__inner {
+  max-width: 900px;
 }
 
 .section {
@@ -132,6 +149,7 @@ p {
   display: flex;
   align-items: flex-end;
   overflow: hidden;
+  box-shadow: 0 30px 60px -30px rgba(20, 16, 12, 0.4);
 }
 
 .hero__image-wrap {
@@ -143,7 +161,7 @@ p {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
+  object-position: center 38%;
 }
 
 .hero__image-wrap::after {
@@ -152,10 +170,10 @@ p {
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(20, 16, 12, 0.85) 0%,
-    rgba(20, 16, 12, 0.48) 38%,
-    rgba(20, 16, 12, 0.14) 62%,
-    rgba(20, 16, 12, 0.02) 80%
+    rgba(20, 16, 12, 0.88) 0%,
+    rgba(20, 16, 12, 0.6) 30%,
+    rgba(20, 16, 12, 0.22) 55%,
+    rgba(20, 16, 12, 0.04) 75%
   );
 }
 
@@ -180,6 +198,7 @@ p {
 
 .hero__title {
   font-size: clamp(3rem, 10vw, 5.5rem);
+  letter-spacing: -0.01em;
   color: var(--white);
   margin-bottom: var(--space-3);
 }
@@ -201,26 +220,24 @@ p {
 }
 
 .hero__scroll-hint {
-  margin: var(--space-4) auto 0;
-  width: 1px;
-  height: 44px;
-  background: rgba(251, 246, 238, 0.4);
-  position: relative;
-  overflow: hidden;
+  margin: var(--space-3) auto 0;
+  width: 22px;
+  height: 22px;
+  color: var(--sand);
+  animation: scrollBounce 2s ease-in-out infinite;
 }
-.hero__scroll-hint span {
-  position: absolute;
-  top: -100%;
-  left: 0;
+.hero__scroll-hint svg {
   width: 100%;
   height: 100%;
-  background: var(--gold-soft);
-  animation: scrollDrop 2.2s ease-in-out infinite;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
-@keyframes scrollDrop {
-  0% { top: -100%; }
-  60% { top: 100%; }
-  100% { top: 100%; }
+@keyframes scrollBounce {
+  0%, 100% { transform: translateY(0); opacity: 0.55; }
+  50% { transform: translateY(6px); opacity: 1; }
 }
 
 /* ===== Timeline (unified, alternating) ===== */
@@ -298,6 +315,9 @@ p {
     var(--shadow-hover);
 }
 
+.timeline__item--wide-thumb { --thumb-size: 104px; }
+.timeline__thumb--screenshot { border-radius: 16px; }
+
 .timeline__content { grid-column: 1; text-align: right; }
 .timeline__item:nth-child(even) .timeline__content { grid-column: 3; text-align: left; }
 
@@ -311,6 +331,21 @@ p {
   margin-bottom: 0.3rem;
 }
 
+/* The Kfar Saba entry gets a distinct accent to mark it as a different kind of moment */
+.timeline__item--accent .timeline__date { color: var(--accent); }
+.timeline__item--accent .timeline__thumb {
+  box-shadow:
+    0 0 0 5px var(--cream),
+    0 0 0 6px var(--accent-soft),
+    var(--shadow-soft);
+}
+.timeline__item--accent:hover .timeline__thumb {
+  box-shadow:
+    0 0 0 5px var(--cream),
+    0 0 0 6px var(--accent),
+    var(--shadow-hover);
+}
+
 .timeline__title {
   font-size: 1.4rem;
   margin-bottom: var(--space-1);
@@ -322,6 +357,10 @@ p {
 }
 
 /* ===== Marquee ===== */
+.section--marquee {
+  padding: var(--space-5) 0;
+}
+
 .marquee {
   direction: ltr;
   overflow: hidden;
@@ -343,7 +382,7 @@ p {
   width: 260px;
   height: 320px;
   margin: 0;
-  border-radius: var(--radius);
+  border-radius: 16px;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
   transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
@@ -491,6 +530,6 @@ p {
     transform: none;
     transition: none;
   }
-  .hero__scroll-hint span { animation: none; }
+  .hero__scroll-hint { animation: none; }
   .marquee__track { animation: none; }
 }
