@@ -189,16 +189,6 @@ p {
   color: var(--cream);
 }
 
-.hero__eyebrow {
-  font-family: var(--font-sans);
-  letter-spacing: 0.32em;
-  text-transform: uppercase;
-  font-size: 0.75rem;
-  font-weight: 500;
-  color: var(--sand);
-  margin-bottom: var(--space-2);
-}
-
 .hero__title {
   font-size: clamp(3rem, 10vw, 5.5rem);
   letter-spacing: -0.01em;
