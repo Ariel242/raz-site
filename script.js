@@ -3,9 +3,11 @@ const marqueeImages = [
   'trip-south-01.jpg', 'trip-south-02.jpg', 'trip-south-03.jpg',
   'trip-forest-01.jpg', 'trip-caesarea-01.jpg', 'trip-caesarea-02.jpg',
   'trip-caesarea-03.jpg', 'trip-caesarea-04.jpg', 'trip-coast-00-shfayim.jpg',
-  'trip-coast-01-running.jpg', 'trip-coast-02.jpg', 'trip-north-01.jpg',
-  'trip-north-02.jpg', 'trip-north-03.jpg', 'place-cafe-02.jpg',
-  'place-cafe-cart-01.jpg', 'place-asian-01.jpg',
+  'trip-coast-01-running.jpg', 'trip-coast-02.jpg', 'trip-coast-03.jpg',
+  'trip-north-01.jpg', 'trip-north-02.jpg', 'trip-north-03.jpg',
+  'trip-north-04.jpg', 'trip-budapest-01.jpg', 'trip-picnic-01.jpg',
+  'trip-picnic-02.jpg', 'place-cafe-02.jpg', 'place-cafe-cart-01.jpg',
+  'place-asian-01.jpg',
   // הוסיפי כאן קבצים נוספים מתוך assets/, באותו פורמט: 'שם-קובץ.jpg',
 ];
 
